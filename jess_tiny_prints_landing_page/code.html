@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-tertiary-fixed-variant": "#474747",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-on-surface": "#f3f1e9",
+                        "tertiary-fixed": "#e4e2e2",
+                        "on-primary-fixed-variant": "#374b43",
+                        "inverse-primary": "#b5ccc1",
+                        "secondary-fixed-dim": "#e9bcb3",
+                        "on-tertiary-container": "#353536",
+                        "on-surface-variant": "#424845",
+                        "background": "#fbf9f1",
+                        "error-container": "#ffdad6",
+                        "surface": "#fbf9f1",
+                        "surface-container-highest": "#e4e3db",
+                        "on-error": "#ffffff",
+                        "primary": "#4e635a",
+                        "primary-container": "#8da399",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d1e8dd",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f0eee6",
+                        "on-secondary-fixed-variant": "#5e3f38",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#eae8e0",
+                        "surface-tint": "#4e635a",
+                        "tertiary-container": "#9f9e9e",
+                        "surface-bright": "#fbf9f1",
+                        "surface-variant": "#e4e3db",
+                        "outline-variant": "#c2c8c4",
+                        "surface-container-low": "#f5f4ec",
+                        "on-primary-fixed": "#0b1f18",
+                        "tertiary": "#5e5e5e",
+                        "inverse-surface": "#30312c",
+                        "secondary": "#78564e",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "on-secondary-container": "#79574f",
+                        "surface-dim": "#dcdad2",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "secondary-fixed": "#ffdad2",
+                        "on-primary-container": "#263932",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#fed0c5",
+                        "on-secondary": "#ffffff",
+                        "outline": "#727875",
+                        "on-secondary-fixed": "#2d150f",
+                        "on-background": "#1b1c17",
+                        "primary-fixed-dim": "#b5ccc1",
+                        "on-surface": "#1b1c17"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .perspective-lg { perspective: 1000px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm opacity-90 transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-emerald-900 dark:text-emerald-50 font-headline">
+                Jess' Tiny Prints
+            </div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center space-gap-8 gap-x-12">
+<div class="flex items-center space-x-8 font-headline text-sm tracking-widest uppercase">
+<a class="text-emerald-700 dark:text-emerald-300 border-b border-emerald-700/30 pb-1 hover:opacity-80 transition-all duration-300" href="#">Shop</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-900 dark:hover:text-emerald-100 transition-colors hover:opacity-80 transition-all duration-300" href="#">Gallery</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-emerald-900 dark:hover:text-emerald-100 transition-colors hover:opacity-80 transition-all duration-300" href="#">Cart</a>
+</div>
+<button class="scale-95 active:scale-100 transition-transform text-emerald-900 dark:text-emerald-100">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<div class="flex flex-col md:flex-row items-end gap-12">
+<div class="w-full md:w-3/5 space-y-8">
+<span class="font-label text-xs tracking-[0.2em] uppercase text-secondary">Est. 2024 — Handcrafted Art</span>
+<h1 class="font-headline text-6xl md:text-8xl leading-[1.1] text-on-surface tracking-tight">
+                        Small moments, <br/>
+<span class="italic font-normal text-primary">lasting impressions.</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        Jess' Tiny Prints curates custom 2x2 and 3x3 canvas prints that turn your digital memories into physical heirlooms. Designed for minimal spaces and maximum emotion.
+                    </p>
+<div class="pt-4">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-none font-label tracking-widest uppercase text-sm hover:bg-primary-container transition-all duration-300 hover:shadow-lg shadow-primary/10">
+                            Start Your Custom Print
+                        </button>
+</div>
+</div>
+<div class="w-full md:w-2/5 relative">
+<div class="aspect-[4/5] bg-surface-container-high relative overflow-hidden group">
+<img alt="Tiny artistic print on a small easel" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a 3x3 inch oil painting print on a miniature wooden easel standing on a cream marble surface with soft afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSp__6FuWvYHyBadLJE7xQ8dp6nx1NVMv4S8nWIxfharOIRxTutZ44VEEKrrQWwebR_rND70YpwvXR1dCA_T2XsxZhVXT6u-ZIUJU1BBLOw1Jl1NWk9_XzHppSzxUG5Hfl-m0NmRlLKfrfqYAjcF1d1dFbNZSDihgBM0jkiLu000rgNS1ZfW14R3rRmSOrTZZID-5uofEZrPjO4Z5xcS5bUsVGAEVV6NGIQBORYAGRr8bUk1GjIGYG8s_QOah2fCPFLprT-04zhFU"/>
+<div class="absolute inset-0 bg-on-surface/5"></div>
+</div>
+<div class="absolute -bottom-12 -left-12 hidden lg:block w-48 h-48 p-4 bg-surface-container-lowest shadow-sm">
+<img alt="Detail of canvas texture" class="w-full h-full object-cover" data-alt="Micro photography showing the fine weave texture of premium artist canvas with a soft sage green paint stroke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC7skiHMctXFY9wwsCZxsUjrYL92c89rbpVdw6b67UnoW5109m5MmHGoVKOXQiEi6q2_HOQsnLsnKqepvOasirFua65AJgm6SbrVHKkyXK_EifJ5Y3DhbtWDSWCk25YWM7vyLe5J72vu7fUhWRVocdAVgP0l0X1W5thZRcBEIZseFqlqVAGMS5pOPWAho9Cum1cc-UemrIquYatnbhHAYMBPcLM_ZXnAGEsgjEz4xSYSiDCaX50Ib2HkA3UJWdzc_GkVDaLRO3zbY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Carousel (Gallery Wall Style) -->
+<section class="bg-surface-container-low py-32 overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 mb-16 flex justify-between items-end">
+<div>
+<h2 class="font-headline text-4xl text-on-surface mb-2">The Collection</h2>
+<p class="font-body text-secondary italic">A curation of 2x2 and 3x3 canvas works</p>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">west</span>
+</button>
+<button class="w-12 h-12 flex items-center justify-center border border-outline-variant/30 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary">east</span>
+</button>
+</div>
+</div>
+<div class="flex gap-12 overflow-x-auto hide-scrollbar px-8 lg:px-[calc((100vw-80rem)/2)] snap-x snap-mandatory">
+<!-- Gallery Item 1 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start">
+<div class="bg-surface-container-high p-12 aspect-square flex items-center justify-center mb-6 shadow-sm">
+<div class="w-48 h-48 bg-white shadow-xl relative overflow-hidden group">
+<img alt="Mini print 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A 2x2 tiny print of a minimalist landscape with a single bird, displayed in a white matte frame on a clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRfiRubEv4npezpunAS7BACE8LyOpllL7GGy--gV4fZ4kXtjLtfqUVMWoSmGnKl-bNwIjk7ZOOeevQ9T4QQspJRXCo96vW0APCOOfw-1hzpOpG-r-IeCRmLevO7dnBgwWAW5nG0D424GvcoaEp5NII-ETOi0AbwlFVLp6vuobSblRcGfoLqISSKsxmvM-ZjEe9jNZINX7WURXzPS2CGOpLSZiuwwM7sBfUIx5t1nrOm0oUfzVakznNezpcP4ZXd5-onSwW8zrJXMQ"/>
+<div class="absolute inset-0 border-[16px] border-surface-container-high/20 pointer-events-none"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] tracking-widest text-secondary uppercase">Mini Canvas • 2" x 2"</span>
+<h3 class="font-headline text-xl">The Solitary Flight</h3>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start mt-12">
+<div class="bg-surface-container-high p-12 aspect-square flex items-center justify-center mb-6 shadow-sm">
+<div class="w-64 h-64 bg-white shadow-xl relative overflow-hidden group">
+<img alt="Mini print 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A 3x3 tiny print featuring vibrant dried botanical arrangements against a dark charcoal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9eenPFeMpEF-NLJOGYVhzNYThKWQn3hClS-duA0C9HZDzHLJ0qFVZuEmfKo3ieSV8YXTtkB0b8H1hiu7o7w3sePJ5LC21qtEpuwoA9PZeUVinhoAqkByY4R2pp2twLsL0lVSbKQ0F_kfWyUbNkQJ_wWyvUdt36cP_IEF0fNXUE-ieA2yr2vTTyXpOG_diJ7onNdR8zukUFbKuQOfChV01WK9upugU_epy9Pt20kmyimPw6NGo-yFlzHuduMj94udtc-ZWYxttRk0"/>
+<div class="absolute inset-0 border-[20px] border-surface-container-high/20 pointer-events-none"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] tracking-widest text-secondary uppercase">Mini Canvas • 3" x 3"</span>
+<h3 class="font-headline text-xl">Botanical Study No. 4</h3>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start">
+<div class="bg-surface-container-high p-12 aspect-square flex items-center justify-center mb-6 shadow-sm">
+<div class="w-48 h-48 bg-white shadow-xl relative overflow-hidden group">
+<img alt="Mini print 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist abstract print with warm ochre and terracotta shapes on a textured ivory paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL1c_I-64sk6vvwp6UsDAh5HXOrNbyXH6W5NyTA2ufeENYWphXWpbhu6DOfx5ApyoeaF7EesWnDMp-iTtiFgiN3oJu3bjaqlXwW6OFLnULGsebmN4vGHoiaJWAynDuAZ3YbfuDFY1qHHcTVN6qSwI01vrsQ0nt4iGf5A96AXb3W0V_bq-iiuzoyg7VaSI0pIEw7_6Q_5FDll0XLnyTFs9EbvAzURsJx1o_zghw_gT2x-Ksb3WYRUxaZPBenL0aBeDc0MeQ73nT-fw"/>
+<div class="absolute inset-0 border-[16px] border-surface-container-high/20 pointer-events-none"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] tracking-widest text-secondary uppercase">Mini Canvas • 2" x 2"</span>
+<h3 class="font-headline text-xl">Warmth in Geometry</h3>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="min-w-[300px] md:min-w-[400px] snap-start mt-12">
+<div class="bg-surface-container-high p-12 aspect-square flex items-center justify-center mb-6 shadow-sm">
+<div class="w-64 h-64 bg-white shadow-xl relative overflow-hidden group">
+<img alt="Mini print 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Close-up of a tiny classical book cover illustration printed on canvas with delicate gold foil details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU-qd4kSRQBaS_0Cj-OaScjKRyWPDoA63Ylv33xpyr_T-xGLpK9Qi2SRXESRcxD-uTV9-FcVC_1b9sVIdgrR3Rbkx38GK5TGCOg_K3biEYdb0wE_CEie5ZnshID-GDhGp9jeQ5Vypt7J8QkhYL8PZDji6oLLkM1vQnrQ37AU4lyhcJeB5BLF7zS2rkNzB-3ucnmdtMfS74ogDJvcUQ-qmZyXzEX3K-_pOoJWEYjanmgeXCtP5H-KrbQ5TUWz7oUG6qkUZPMITPwE0"/>
+<div class="absolute inset-0 border-[20px] border-surface-container-high/20 pointer-events-none"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="font-label text-[10px] tracking-widest text-secondary uppercase">Mini Canvas • 3" x 3"</span>
+<h3 class="font-headline text-xl">Literary Gilded Dreams</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Artist Insight / Pull Quote -->
+<section class="max-w-4xl mx-auto px-8 py-32 text-center">
+<span class="material-symbols-outlined text-secondary-container text-4xl mb-6" data-icon="format_quote" data-weight="fill">format_quote</span>
+<p class="font-headline text-3xl md:text-5xl text-secondary leading-relaxed italic">
+                "We often overlook the small details in life. My goal is to capture them in a way that demands your attention, held in the palm of your hand."
+            </p>
+<div class="mt-12 flex flex-col items-center">
+<div class="w-16 h-[1px] bg-outline-variant mb-4"></div>
+<span class="font-label tracking-widest uppercase text-xs">Jess Miller, Curator</span>
+</div>
+</section>
+<!-- Bento Grid Feature Section -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 bg-surface-container p-12 flex flex-col justify-center space-y-6">
+<h2 class="font-headline text-4xl max-w-md">Museum Quality, Miniature Scale</h2>
+<p class="text-on-surface-variant max-w-lg">Each print uses archival-grade inks and hand-stretched canvas over solid wood frames. We treat your 2x2 prints with the same reverence as a large-scale gallery piece.</p>
+<ul class="space-y-3 font-label text-xs tracking-wider uppercase text-primary">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+                            Acid-Free Canvas
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+                            UV-Protected Finish
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[16px]" data-icon="check">check</span>
+                            Sustainably Sourced Wood
+                        </li>
+</ul>
+</div>
+<div class="bg-primary text-on-primary p-12 flex flex-col justify-end space-y-6 aspect-square md:aspect-auto">
+<span class="material-symbols-outlined text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h3 class="font-headline text-3xl">Gifting Simplified</h3>
+<p class="text-on-primary/80">Every tiny print arrives in a bespoke linen-wrapped gift box, ready to delight.</p>
+</div>
+<div class="bg-secondary-container p-12 flex flex-col justify-between items-start aspect-square md:aspect-auto">
+<div class="text-on-secondary-container">
+<span class="font-label text-[10px] tracking-widest uppercase mb-2 block">Custom Service</span>
+<h3 class="font-headline text-2xl">Bespoke Framing</h3>
+</div>
+<a class="text-on-secondary-container border-b border-on-secondary-container/30 pb-1 font-label text-xs uppercase tracking-widest hover:opacity-70 transition-opacity" href="#">Learn More</a>
+</div>
+<div class="md:col-span-2 bg-surface-container-highest overflow-hidden h-80 relative group">
+<img alt="Elegant studio setup" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Interior shot of a minimalist artist studio with soft light hitting a wooden desk covered in small art supplies and canvas scraps" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvXJVX6or6AIwRZ4pxYVrhb9jBrBze_kPdJnLV28WHWG1oh5mgP28rd2RPn2dkWDRMokV_KfJFgqfRNxUsXqoLONYnqUKkQvenX7705_uNV2RTWp2g8KGsLfiHtqFU3Syqg8MTIJEY53qXOVAGzRPAN-zXTXuMqHGcBlabxmDCVHselrb2qsoPixSMyFlLI6js9hN8zBu4sP55OGXdQlbjQb11KooVq9gZHdNP_laF8lSFX3aGu1Tc1C0CVD8Og6JIR38ycUZ56-w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<p class="font-headline text-2xl">Crafted in our Portland studio.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="bg-surface-container-lowest border border-outline-variant/10 p-16 md:p-24 text-center space-y-10">
+<h2 class="font-headline text-5xl md:text-7xl text-on-surface max-w-3xl mx-auto leading-tight">Ready to curate your small space?</h2>
+<p class="text-on-surface-variant text-lg max-w-xl mx-auto">Upload your favorite photograph or artwork and let us transform it into a tactile miniature masterpiece.</p>
+<div class="pt-6">
+<button class="bg-primary text-on-primary px-12 py-6 rounded-none font-label tracking-widest uppercase text-sm hover:bg-primary-container transition-all duration-300 transform hover:-translate-y-1">
+                        Start Your Custom Print
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-24 bg-surface_container_low dark:bg-slate-900">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto space-y-8 pt-16 pb-12">
+<div class="font-notoserif italic text-lg text-emerald-800 dark:text-emerald-100">
+                Jess' Tiny Prints
+            </div>
+<div class="flex space-x-12 font-manrope text-xs tracking-normal leading-relaxed">
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-100 hover:opacity-70 transition-opacity" href="#">Instagram</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-100 hover:opacity-70 transition-opacity" href="#">Contact</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors opacity-100 hover:opacity-70 transition-opacity" href="#">Shipping Policy</a>
+</div>
+<div class="font-manrope text-xs tracking-normal leading-relaxed text-slate-500 dark:text-slate-400">
+                © 2024 Jess' Tiny Prints. Curated with intention.
+            </div>
+</div>
+</footer>
+</body></html>
